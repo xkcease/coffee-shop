@@ -1,24 +1,31 @@
-# coffee-shop
+# coffe-shop
 
-## Project setup
-```
+vue + vant 
+
+## 技术栈
+- Vue 
+- Vue Router
+- Vuex 
+- Vue CLI
+- Vant
+- Sass 
+- ES6
+- Axios
+
+
+## 安装与使用
+```shell
+# 安装依赖
 npm install
+
+# 本地运行
+npm run serve 	
+
+# 打包
+npm run build		
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 功能
+1. to be continued
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
