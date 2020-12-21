@@ -26,6 +26,9 @@ npm run build
 ```
 
 ## 功能
-1. to be continued
+1. 登录注册
+2. 主页
+3. 菜单
+4. to be continued
 
 
