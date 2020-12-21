@@ -1,14 +1,48 @@
 import Vue from 'vue';
-import App from './App.vue';
+import App from './App';
 import router from './router';
 import store from './store';
 import 'amfe-flexible';
 import 'font-awesome/css/font-awesome.min.css';
-import axios from 'axios';
-import VueAxios from 'vue-axios';
+import {
+    Row,
+    Col,
+    Button,
+    Popup,
+    Form,
+    Field,
+    Tabbar,
+    TabbarItem,
+    Toast,
+    Swipe,
+    SwipeItem,
+    Search,
+    Card,
+    Empty,
+    NavBar,
+    GoodsAction,
+    GoodsActionIcon,
+    GoodsActionButton,
+} from 'vant';
 
-Vue.use(VueAxios, axios);
-axios.defaults.baseURL = 'http://www.kangliuyong.com:10002';
+Vue.use(Row)
+    .use(Col)
+    .use(Button)
+    .use(Popup)
+    .use(Form)
+    .use(Field)
+    .use(Tabbar)
+    .use(TabbarItem)
+    .use(Toast)
+    .use(Swipe)
+    .use(SwipeItem)
+    .use(Search)
+    .use(Card)
+    .use(Empty)
+    .use(NavBar)
+    .use(GoodsAction)
+    .use(GoodsActionIcon)
+    .use(GoodsActionButton);
 
 Vue.config.productionTip = false;
 
