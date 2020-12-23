@@ -124,7 +124,6 @@ export default {
                     item.type,
                     JSON.stringify(this.products)
                 );
-                console.log(this.products);
             });
         },
         changeTab(type) {
