@@ -29,6 +29,9 @@ npm run build
 1. 登录注册
 2. 主页
 3. 菜单
-4. to be continued
+4. 商品详细页
+5. 购物袋
+6. 我的
+7. to be continued
 
 
