@@ -101,7 +101,7 @@
 </template>
 
 <script>
-import { queryString } from '../assets/js/util';
+import { postData } from '../assets/js/http';
 
 export default {
     name: 'Login',
@@ -182,19 +182,16 @@ export default {
         login() {
             this.$refs.loginForm.validate().then(() => {
                 let data = {
-                    appkey: this.appkey,
                     phone: this.userLogin.phone,
                     password: this.userLogin.password,
                 };
 
-                this.axios.post('/login', queryString(data)).then((res) => {
-                    console.log(res.data);
-                    if (res.data.code !== 200) {
+                postData('/login', data).then((res) => {
+                    if (res.code !== 200) {
                         this.isShowError = true;
                         return;
                     }
-
-                    sessionStorage.setItem('token', res.data.token);
+                    sessionStorage.setItem('token', res.token);
                     this.$router.push({ name: 'Home' });
                 });
             });
@@ -202,15 +199,14 @@ export default {
         register() {
             this.$refs.registerForm.validate().then(() => {
                 let data = {
-                    appkey: this.appkey,
                     nickName: this.userRegister.nickName,
                     phone: this.userRegister.phone,
                     password: this.userRegister.password,
                 };
 
-                this.axios.post('/register', queryString(data)).then((res) => {
+                postData('/register', data).then((res) => {
                     console.log(res.data);
-                    if (res.data.code !== 100) {
+                    if (res.code !== 100) {
                         this.isShowExist = false;
                         return;
                     }
