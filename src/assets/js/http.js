@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { APPKEY } from './appkey';
+import { queryString } from './util';
 
 const instance = axios.create({
     baseURL: 'http://www.kangliuyong.com:10002',
@@ -19,9 +20,9 @@ function getData(url, params) {
 }
 
 function postData(url, data) {
-    return Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         instance
-            .post(url, { appkey: APPKEY, ...data })
+            .post(url, queryString({ appkey: APPKEY, ...data }))
             .then(res => {
                 resolve(res.data);
             })
