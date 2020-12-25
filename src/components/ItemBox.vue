@@ -29,7 +29,7 @@ export default {
         padding: 8px;
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         border-radius: 5px;
     }
 
@@ -42,7 +42,8 @@ export default {
         display: inline-block;
         width: 100%;
         font-size: 18px;
-        color: rgb(236, 234, 86, 0.7);
+        font-family: 'STKaiti';
+        color: rgba(245, 245, 245, 0.7);
         background-color: rgb(221, 223, 204, 0.2);
         padding: 8px;
         position: absolute;
