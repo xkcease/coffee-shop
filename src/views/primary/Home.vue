@@ -79,7 +79,6 @@ export default {
         }
 
         getAllData(requestArray).then((res) => {
-            console.log(res);
             this.banners = res[0].data.result;
             this.hotItem = res[1].data.result;
             this.user = res[2]?.data?.result ?? {};

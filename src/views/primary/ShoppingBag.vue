@@ -58,6 +58,7 @@
                 :disabled="total === 0"
                 button-text="提交订单"
                 button-color="#0066CC"
+                @submit="toPay"
             >
                 <van-checkbox v-model="isAllChekced" @click="selectAll"
                     >全选</van-checkbox
@@ -121,6 +122,19 @@ export default {
         },
         toMenu() {
             this.$router.push({ name: 'Menu' });
+        },
+        toPay() {
+            let sids = [];
+
+            this.bag.forEach((product) => {
+                if (product.isCheck) {
+                    sids.push(product.sid);
+                }
+            });
+
+            sessionStorage.setItem('sids', JSON.stringify(sids));
+
+            this.$router.push({ name: 'Pay' });
         },
         checkBag() {
             let tokenString = sessionStorage.getItem('token');

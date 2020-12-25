@@ -1,6 +1,11 @@
 <template>
     <div class="my">
-        <van-cell class="my__cell" :center="true" is-link>
+        <van-cell
+            class="my__cell"
+            :center="true"
+            :to="{ name: 'Account' }"
+            is-link
+        >
             <div class="my__info">
                 <img class="my__img" :src="user.userImg" />
                 <div class="l-flex">
@@ -13,9 +18,14 @@
         </van-cell>
         <van-cell-group class="my__cell">
             <van-cell title="收货地址" :to="{ name: 'Address' }" is-link />
-            <van-cell title="我的订单" is-link />
+            <van-cell title="我的订单" :to="{ name: 'Order' }" is-link />
         </van-cell-group>
-        <van-cell class="my__cell" title="我的收藏" is-link />
+        <van-cell
+            class="my__cell"
+            title="我的收藏"
+            :to="{ name: 'Like' }"
+            is-link
+        />
         <van-cell
             class="my__cell"
             title="账号与安全"
