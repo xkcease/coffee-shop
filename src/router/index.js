@@ -64,10 +64,34 @@ const routes = [
         component: () => import(/* webpackChunkName: "pay" */ '../views/Pay'),
     },
     {
+        path: '/account',
+        name: 'Account',
+        component: () =>
+            import(/* webpackChunkName: "my" */ '../views/my/Account'),
+    },
+    {
+        path: '/like',
+        name: 'Like',
+        component: () =>
+            import(/* webpackChunkName: "my" */ '../views/my/Like'),
+    },
+    {
         path: '/address',
         name: 'Address',
         component: () =>
             import(/* webpackChunkName: "my" */ '../views/my/Address'),
+    },
+    {
+        path: '/addressModify',
+        name: 'AddressModify',
+        component: () =>
+            import(/* webpackChunkName: "my" */ '../views/my/AddressModify'),
+    },
+    {
+        path: '/order',
+        name: 'Order',
+        component: () =>
+            import(/* webpackChunkName: "my" */ '../views/my/Order'),
     },
     {
         path: '/security',

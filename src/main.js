@@ -23,6 +23,18 @@ import {
     GoodsAction,
     GoodsActionIcon,
     GoodsActionButton,
+    Stepper,
+    SubmitBar,
+    Cell,
+    CellGroup,
+    Checkbox,
+    AddressList,
+    AddressEdit,
+    Icon,
+    Divider,
+    Tabs,
+    Tab,
+    Uploader,
 } from 'vant';
 
 Vue.use(Row)
@@ -42,7 +54,19 @@ Vue.use(Row)
     .use(NavBar)
     .use(GoodsAction)
     .use(GoodsActionIcon)
-    .use(GoodsActionButton);
+    .use(GoodsActionButton)
+    .use(Stepper)
+    .use(SubmitBar)
+    .use(Cell)
+    .use(CellGroup)
+    .use(Checkbox)
+    .use(AddressList)
+    .use(AddressEdit)
+    .use(Icon)
+    .use(Divider)
+    .use(Tabs)
+    .use(Tab)
+    .use(Uploader);
 
 Vue.config.productionTip = false;
 
