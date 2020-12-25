@@ -102,6 +102,7 @@
 
 <script>
 import { postData } from '../assets/js/http';
+import { mapMutations } from 'vuex';
 
 export default {
     name: 'Login',
@@ -176,6 +177,7 @@ export default {
         };
     },
     methods: {
+        ...mapMutations(['setTokenString']),
         showRegister() {
             this.isShowRegister = !this.isShowRegister;
         },
@@ -192,6 +194,8 @@ export default {
                         return;
                     }
                     sessionStorage.setItem('token', res.token);
+                    this.setTokenString({ tokenString: res.token });
+
                     this.$router.push({ name: 'Home' });
                 });
             });
