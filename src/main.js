@@ -35,6 +35,7 @@ import {
     Tabs,
     Tab,
     Uploader,
+    Dialog,
 } from 'vant';
 
 Vue.use(Row)
@@ -66,7 +67,8 @@ Vue.use(Row)
     .use(Divider)
     .use(Tabs)
     .use(Tab)
-    .use(Uploader);
+    .use(Uploader)
+    .use(Dialog);
 
 Vue.config.productionTip = false;
 
