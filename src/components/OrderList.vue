@@ -14,7 +14,7 @@
                 <van-card
                     class="order-list__card"
                     :desc="product.enname"
-                    :thumb="product.smallImg"
+                    :thumb="getAvatar(product)"
                     :price="product.price"
                     :num="product.count"
                 >
@@ -62,6 +62,9 @@ export default {
     },
     methods: {
         formatDate,
+        getAvatar(product) {
+            return product?.small_img ?? product.smallImg;
+        },
         submitOrder() {
             let tokenString = sessionStorage.getItem('token');
             if (!tokenString) {
